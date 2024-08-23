@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+        </header>
+        <form id="task-form">
+            <input type="text" id="task-name" placeholder="Task Name" required>
+            <input type="datetime-local" id="task-time" required>
+            <select id="task-category">
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="study">Study</option>
+            </select>
+            <select id="task-priority">
+                <option value="high">High Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="low">Low Priority</option>
+            </select>
+            <input type="submit" value="Add Task">
+        </form>
+        <section class="task-list-section">
+            <div class="filters">
+                <input type="text" id="search-bar" placeholder="Search tasks...">
+                <select id="filter-category">
+                    <option value="all">All Categories</option>
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                    <option value="study">Study</option>
+                </select>
+            </div>
+            <h2>Your Tasks</h2>
+            <ul id="task-list"></ul>
+        </section>
+        <section class="calendar-section">
+            <h2>Task Calendar</h2>
+            <div id="calendar"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
